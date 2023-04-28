@@ -476,4 +476,17 @@ input:focus {
   .input-container {
    display: block;
   }
+
+  .newsletter-input
+  {
+    display: block;
+    width: 370px;
+    margin: 0 auto;
+  }
+
+  .input-container .custom-button
+  {
+    width: 370px;
+    margin-top: 20px;
+  }
 }
