@@ -214,8 +214,9 @@
   font-weight: 700;
   letter-spacing: 2.4px;
   color: rgb(212, 175, 55);
-  padding: 16px 144px;
+  padding: 16px 28px;
   cursor: pointer;
+  width: 100%;
   --c: rgb(30, 30, 30);
 }
 
