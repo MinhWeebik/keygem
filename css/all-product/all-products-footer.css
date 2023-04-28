@@ -164,7 +164,7 @@
   }
 
   .footer {
-    padding: 34px 24px;
+    padding: 34px 20px;
   }
 
   .reviews,
@@ -185,6 +185,11 @@
 
   .payment-container {
     display: none;
+  }
+
+  .social-media
+  {
+    width: 100%;
   }
 }
 

@@ -20,13 +20,6 @@
       class="cart-background"
       onclick="closeCartNav(), closeSearchNav(), closeMenu()"
     ></div>
-    <div id="search-nav" class="search-nav">
-      <img src="logos/search-icon.PNG" class="search-icon" />
-      <input type="text" class="search-input" placeholder="SEARCH..." />
-      <button class="close-button" onclick="closeSearchNav()">
-        <img src="logos/x-2.PNG" class="close-icon" />
-      </button>
-    </div>
     <div id="cart-nav" class="cart-nav">
       <div class="cart-header">
         <div class="cart-text-1">CART</div>
@@ -48,8 +41,15 @@
     </div>
     <div class="top-header">
       <div id="header" class="header">
+        <div id="search-nav" class="search-nav">
+          <img src="logos/search-icon.PNG" class="search-icon" />
+          <input type="text" class="search-input" placeholder="SEARCH..." />
+          <button class="close-button" onclick="closeSearchNav()">
+            <img src="logos/x-2.PNG" class="close-icon" />
+          </button>
+        </div>
         <div class="left-section">
-          <div class="menu">
+          <div class="menu home-menu">
             <a href="index.html">HOME</a>
             <div class="line">
               <div class="line-animation"></div>

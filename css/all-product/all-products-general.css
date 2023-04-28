@@ -259,20 +259,50 @@ a {
 }
 
 .search-nav {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
+  z-index: 11;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(59, 59, 59);
-  top: 125px;
   height: 85px;
   padding: 0 50px;
   opacity: 0;
   display: flex;
-  transform: translateY(-83px);
-  z-index: 0;
-  transition: transform 0.2s linear;
+  pointer-events: none;
+}
+
+.search-nav-open {
+  animation: searchOpen 0.2s forwards;
+}
+
+.search-nav-close {
+  animation: searchClose 0.2s;
+}
+
+@keyframes searchOpen {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(83px);
+  }
+}
+
+@keyframes searchClose {
+  from {
+    opacity: 1;
+    transform: translateY(83px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(0);
+  }
 }
 
 .search-icon {
@@ -281,6 +311,7 @@ a {
 
 .close-icon {
   height: 22px;
+  width: 22px;
 }
 
 .search-input {
@@ -294,6 +325,7 @@ a {
   letter-spacing: 3.6px;
   margin-left: 20px;
   text-transform: uppercase;
+  min-width: 180px;
 }
 
 .search-input::placeholder {
@@ -347,12 +379,12 @@ input:focus {
   left: 0;
   bottom: 0;
   background-color: #1c1b1b;
-  width: 340px;
+  width: 260px;
   display: flex;
   overflow-x: hidden;
   flex-direction: column;
   transition: transform 0.3s linear;
-  transform: translateX(-340px);
+  transform: translateX(-260px);
   overflow: hidden;
   cursor: default;
   z-index: 20;
@@ -399,22 +431,55 @@ input:focus {
 
 @media screen and (max-width: 600px) {
   .cart-nav {
-    width: 380px;
-  }
-
-  .item-flexbox {
-    padding: 0;
-  }
-
-  .cart-footer .custom-button {
-    padding: 14px 40px;
-  }
-
-  .search-nav {
-    top: 100px;
-    height: 30px;
-    padding: 14px 18px;
-  }
+      width: 360px;
+    }
+  
+    .item-flexbox {
+      padding: 0;
+      padding-right: 20px;
+    }
+  
+    .cart-footer .custom-button {
+      padding: 14px 40px;
+    }
+  
+    .search-nav {
+      top: 0;
+      height: 30px;
+      padding: 14px 18px;
+    }
+  
+    .search-nav-open {
+      animation: searchOpen 0.2s forwards;
+    }
+  
+    .search-nav-close {
+      animation: searchClose 0.2s;
+    }
+  
+    @keyframes searchOpen {
+      from {
+        opacity: 0;
+        transform: translateY(0);
+      }
+  
+      to {
+        opacity: 1;
+        transform: translateY(58px);
+      }
+    }
+  
+    @keyframes searchClose {
+      from {
+        opacity: 1;
+        transform: translateY(58px);
+      }
+  
+      to {
+        opacity: 0;
+        transform: translateY(0);
+      }
+    }
 
   .search-input {
     font-size: 15px;

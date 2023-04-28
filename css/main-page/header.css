@@ -46,6 +46,7 @@
 
 .header:hover {
   background-color: black;
+  z-index: 11;
 }
 
 .main-logo {
@@ -62,24 +63,23 @@
 
 .left-section {
   display: flex;
-  width: 220px;
-  justify-content: space-between;
+  justify-content:start;
   align-items: center;
+  flex: 1;
 }
 
 .right-section {
   display: flex;
-  width: 366px;
-  justify-content: space-between;
+  justify-content:right;
   align-items: center;
+  flex: 1;
 }
 
 .middle-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  left: 64px;
+  width: 250px;
 }
 
 .menu,
@@ -93,6 +93,17 @@
   position: relative;
   cursor: pointer;
   transition: color 0.3s;
+  z-index: 11;
+}
+
+.info-menu, .shop-menu, .menu-cart, .menu
+{
+  margin-left: 50px;
+}
+
+.home-menu
+{
+  margin-left: 0;
 }
 
 .menu:hover,
@@ -437,7 +448,6 @@
     {
       height: 58px;
       padding: 15px 18px;
-      background-color: black;
     }
 
     .banner-info-text {
@@ -447,8 +457,6 @@
     .middle-section
     {
       width: 150px;
-      flex: none;
-      left: 30px;
     }
 
     .mini-search, .mini-menu

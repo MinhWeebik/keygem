@@ -1,6 +1,6 @@
 function openCartNav()
 {
-  if(document.getElementById("search-nav").style.opacity == "1")
+  if(document.querySelector('.search-nav').classList.contains('search-nav-open'))
   {
     closeSearchNav();
   }
@@ -17,7 +17,7 @@ function openCartNav()
 
 function openMenu()
 {
-  if(document.getElementById("search-nav").style.opacity == "1")
+  if(document.querySelector('.search-nav').classList.contains('search-nav-open'))
   {
     closeSearchNav();
   }
@@ -48,10 +48,10 @@ function closeCartNav()
 
 function openSearchNav()
 {
-  document.getElementById("search-nav").style.transform = "translateY(0)";
-  document.getElementById("search-nav").style.opacity = "1";
-  document.getElementById("search-nav").style.zIndex = "10";
-  document.getElementById("cart-background").style.opacity = "12";
+  document.querySelector('.search-nav').classList.add('search-nav-open');
+  document.querySelector('.search-nav').classList.remove('search-nav-close');
+  document.getElementById("search-nav").style.pointerEvents = 'auto';
+  document.getElementById("cart-background").style.opacity = "1";
   document.getElementById("cart-background").style.zIndex = "5";
   document.body.style.overflow = "hidden";
   document.getElementById("header").style.backgroundColor = "black";
@@ -59,15 +59,13 @@ function openSearchNav()
 
 function closeSearchNav()
 {
-  document.getElementById("search-nav").style.transform = "translateY(-83px)";
-  setTimeout(function() {document.getElementById("search-nav").style.opacity = "0";
-    
-  }, 100);
-  document.getElementById("search-nav").style.zIndex = "0";
+  document.querySelector('.search-nav').classList.remove('search-nav-open');
+  document.querySelector('.search-nav').classList.add('search-nav-close');
+  document.getElementById("search-nav").style.pointerEvents = 'none';
   document.getElementById("cart-background").style.opacity ="0";
   document.getElementById("cart-background").style.zIndex="-1";
   document.body.style.overflowY = "auto";
-    document.body.style.overflowX = 'hidden';
+  document.body.style.overflowX = 'hidden';
   document.getElementById("header").style.backgroundColor = "";
 }
 
