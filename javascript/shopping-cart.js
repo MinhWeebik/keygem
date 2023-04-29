@@ -48,6 +48,10 @@ function closeCartNav()
 
 function openSearchNav()
 {
+  if(document.getElementById("mini-menu-container").style.transform = "translateX(-340px)")
+  {
+    closeMenu();
+  }
   document.querySelector('.search-nav').classList.add('search-nav-open');
   document.querySelector('.search-nav').classList.remove('search-nav-close');
   document.getElementById("search-nav").style.pointerEvents = 'auto';

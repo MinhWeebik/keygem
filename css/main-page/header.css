@@ -94,6 +94,7 @@
   cursor: pointer;
   transition: color 0.3s;
   z-index: 11;
+  user-select: none;
 }
 
 .info-menu, .shop-menu, .menu-cart, .menu
