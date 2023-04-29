@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main-page/body.css" />
     <link rel="stylesheet" href="css/main-page/footer.css" />
     <script type="text/javascript" src="javascript/jquery-3.6.4.js"></script>
+    <script src="javascript/product.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -46,11 +47,20 @@
       <img src="logos/banner.png" class="banner-image" />
       <div id="header" class="header">
         <div id="search-nav" class="search-nav">
-          <img src="logos/search-icon.PNG" class="search-icon" />
-          <input type="text" class="search-input" placeholder="SEARCH..." />
-          <button class="close-button" onclick="closeSearchNav()">
-            <img src="logos/x-2.PNG" class="close-icon" />
-          </button>
+          <div class="search-bar">
+            <img src="logos/search-icon.PNG" class="search-icon" />
+            <input type="text" class="search-input" placeholder="SEARCH..." />
+            <button class="close-button" onclick="closeSearchNav()">
+              <img src="logos/x-2.PNG" class="close-icon" />
+            </button>
+          </div>
+          <div class="search-result-container" id="search-result-container">
+            <div class="search-result-header">
+              <div class="search-result-amount">1 RESULT</div>
+              <div class="search-result-viewall">VIEW ALL</div>
+            </div>
+            <div class="search-result-grid"></div>
+          </div>
         </div>
         <div class="left-section">
           <div class="menu home-menu">

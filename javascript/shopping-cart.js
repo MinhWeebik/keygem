@@ -250,3 +250,54 @@ function removeItemFromCart(id)
   cart = cart.filter((item)=>item.id!==id);
   updateCart()
 }
+
+let searchResult = [];
+
+const searchInputEl = document.querySelector('.search-input');
+const searchResultGridEl = document.querySelector('.search-result-grid');
+const productResultEl = document.getElementById('search-result-container');
+const searchResultAmountEl = document.querySelector('.search-result-amount');
+let checkForItem = 0;
+let SearchItemAmount = 0;
+
+searchInputEl.addEventListener('input', () => {
+searchResultGridEl.innerHTML = ''
+SearchItemAmount = 0;
+product.forEach((product) => {
+  if(product.name.toLowerCase().includes(searchInputEl.value.toLowerCase())===true&&searchInputEl.value!=='')
+  {
+    productResultEl.style.display = 'block';
+    searchResultGridEl.innerHTML += `
+    <div class="search-result-item">
+       <div class="search-item-photo-container">
+        <a href="${product.productLink}"><img
+         src="${product.imgSrc}"
+         class="search-item-photo"
+           /></a>
+       </div>
+         <div class="search-item-name"><a href="${product.productLink}">
+        ${product.name}</a>
+     </div>
+          <div class="search-item-price">$ ${product.price}</div>
+       </div>
+    `
+    checkForItem = 1;
+    SearchItemAmount += 1;
+  }
+})
+if(SearchItemAmount===1)
+{
+  searchResultAmountEl.innerHTML = '1 RESULT';
+}
+else
+{
+  searchResultAmountEl.innerHTML = `${SearchItemAmount} RESULTS`
+}
+if(searchInputEl === '' || !checkForItem)
+  {
+    searchResultGridEl.innerHTML = '';
+    productResultEl.style.display = 'none';
+  }
+  checkForItem = 0;
+  console.log(SearchItemAmount);
+})
