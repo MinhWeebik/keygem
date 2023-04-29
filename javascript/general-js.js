@@ -29,3 +29,19 @@ function bestSellerFocus()
   grid1.classList.add('grid-hidden');
   grid1.classList.add('grid-dissappear');
 }
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry)=> {
+    if (entry.isIntersecting)
+    {
+      entry.target.classList.add('show-image');
+    }
+  })
+})
+
+const hiddenElement =   document.querySelectorAll('.catagory-image');
+const hiddenElement2 = document.querySelector('.newsletter-logo');
+hiddenElement.forEach((el) => {
+  observer.observe(el);
+})
+observer.observe(hiddenElement2);
