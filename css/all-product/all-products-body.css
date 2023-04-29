@@ -328,6 +328,7 @@
     column-gap: 24px;
     margin-left: 24px;
     margin-right: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

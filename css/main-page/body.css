@@ -480,13 +480,13 @@ input:focus {
   .newsletter-input
   {
     display: block;
-    width: 370px;
+    width: 300px;
     margin: 0 auto;
   }
 
   .input-container .custom-button
   {
-    width: 370px;
+    width: 300px;
     margin-top: 20px;
   }
 }
