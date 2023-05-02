@@ -58,9 +58,6 @@ u:hover {
 }
 
 input::placeholder,textarea::placeholder {
-  position: absolute;
-  top: 18px;
-  left: 15px;
   color: #d4af37;
   user-select: none;
   font-size: 14px;
