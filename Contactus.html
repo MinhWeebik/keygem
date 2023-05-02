@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>All Products - KEYGEM</title>
+    <title>CLEAR 2048 PURPLE KEYCAPS SET - KEYGEM</title>
     <link rel="icon" href="logos/main-logo.png" type="image/icon type" />
-    <link rel="stylesheet" href="css/all-product/all-products-body.css" />
-    <link rel="stylesheet" href="css/all-product/all-products-footer.css" />
-    <link rel="stylesheet" href="css/all-product/all-products-general.css" />
-    <link rel="stylesheet" href="css/all-product/all-products-header.css" />
+    <link rel="stylesheet" href="css/product/products-header.css" />
+    <link rel="stylesheet" href="css/product/products-general.css" />
+    <link rel="stylesheet" href="css/product/products-footer.css" />
+    <link rel="stylesheet" href="css/contact-us/contact-us-body.css" />
     <script type="text/javascript" src="javascript/jquery-3.6.4.js"></script>
-    <script type="text/javascript" src="javascript/product.js"></script>
+    <script src="javascript/product.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -194,192 +194,41 @@
     </div>
 
     <div class="main-body">
-      <div class="main-body-header-text">PRODUCTS</div>
-      <div class="main-body-header">
-        <div class="main-body-header-change-layout">
-          <div class="first-layout" onclick="changeLayout1()">
-            <div id="block1" class="block1"></div>
-            <div id="block2" class="block1"></div>
-            <div id="block3" class="block1"></div>
-            <div id="block4" class="block1"></div>
-          </div>
-          <div class="second-layout" onclick="changeLayout2()">
-            <div id="block5" class="block2"></div>
-            <div id="block6" class="block2"></div>
-            <div id="block7" class="block2"></div>
-            <div id="block8" class="block2"></div>
-            <div id="block9" class="block2"></div>
-            <div id="block10" class="block2"></div>
-            <div id="block11" class="block2"></div>
-            <div id="block12" class="block2"></div>
-            <div id="block13" class="block2"></div>
-          </div>
-          <div class="third-layout" onclick="changeLayout3()">
-            <div id="block14" class="block3"></div>
-          </div>
+      <h1>CONTACT US</h1>
+      <p>
+        Hello please feel free to contact us via the contact form. You can write
+        us in English or in German.
+      </p>
+      <p>
+        If you would like to contact us regarding a Partnership, Sponsoring or
+        an Idea of a Product / GB please use the <br />
+        following link:
+        <u> Form</u>
+      </p>
+      <div style="margin-bottom: 10px" class="name-and-email">
+        <div class="input1">
+          <input type="text" id="1" placeholder="Your name" required />
+          <label for="1">Your name</label>
         </div>
-        <div class="main-body-header-none"></div>
-        <div class="main-body-header-sort" onclick="sortMenu()">
-          SORT
-          <div class="main-body-header-arrow">
-            <img
-              src="logos/sort-arrow-down-logo.PNG"
-              class="sort-arrow-down-logo"
-            />
-          </div>
-          <div class="sort-container" id="sort-container">
-            <div class="sort-item current" onclick="sortFromAToZ()">
-              ALPHABETICALLY, A-Z
-            </div>
-            <div class="sort-item" onclick="sortFromZToA()">
-              ALPHABETICALLY, Z-A
-            </div>
-            <div class="sort-item" onclick="sortLowToHighPrice()">
-              PRICE, LOW TO HIGH
-            </div>
-            <div class="sort-item" onclick="sortHighToLowPrice()">
-              PRICE, HIGH TO LOW
-            </div>
-          </div>
+        <div class="input2">
+          <input type="text" id="2" placeholder="Your email" />
+          <label for="2">Your email</label>
         </div>
       </div>
-      <div class="item-grid" id="layout">
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-1.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"Baseline" Custom USB Cable</div>
-          <div class="item-price">$ 39</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-2.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"Blackbird " Custom USB Cable</div>
-          <div class="item-price">$ 119</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-3.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"Blacksmith" Custom USB Cable</div>
-          <div class="item-price">$ 99</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-4.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">
-            "Brushworks" Deskmat by Virtual Designworks
-          </div>
-          <div class="item-price">$ 20</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-5.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"Bubblegum" Custom USB Cable</div>
-          <div class="item-price">$ 109</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-6.webp" class="item-image" />
-          </div>
-          <div class="item-info">"Commando" Custom USB Cable</div>
-          <div class="item-price">$ 108,99</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-7.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"CosmiCat" Deskmat</div>
-          <div class="item-price">$ 20</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-8.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"Count" Custom USB Cable</div>
-          <div class="item-price">$ 109</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-9.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"Dear Olivia, ..." Custom USB Cable</div>
-          <div class="item-price">$ 119</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-10.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"Eclipse" Deskmat</div>
-          <div class="item-price">$ 24</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-11.webp" class="item-image" />
-          </div>
-          <div class="item-info">"Esqueletos" Deskmat</div>
-          <div class="item-price">$ 30</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-12.webp" class="item-image" />
-          </div>
-          <div class="item-info">"FROST" Keycap Set - Artisan</div>
-          <div class="item-price">$ 55</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-13.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"FROST" Keycap Set - Base Kit</div>
-          <div class="item-price">$ 90</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-14.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"GEM" Custom USB Cable</div>
-          <div class="item-price">$ 109</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-15.webp" class="item-image" />
-          </div>
-          <div class="item-info">"Liquid Dreams" Deskmat</div>
-          <div class="item-price">$ 25</div>
-        </div>
-        <div class="item">
-          <div class="item-container">
-            <img src="logos/item-16.webp" class="item-image" />
-            <div class="sold-out">SOLD OUT</div>
-          </div>
-          <div class="item-info">"Liquid Emotions" Deskmat</div>
-          <div class="item-price">$ 14,99</div>
+      <div class="input-3-container">
+        <div class="input3">
+          <input type="text" id="3" placeholder="Your phone (optional)" />
+          <label for="3">Your phone</label>
         </div>
       </div>
-      <div class="item-page">
-        <div class="item-page-number-current">1</div>
-        <a href="all-product-page2.html" class="item-page-number">2</a>
-        <div class="item-page-number">3</div>
-        <div class="item-page-dot">...</div>
-        <div class="item-page-number">33</div>
-        <a href="all-product-page2.html" class="next-page-logo-container"
-          ><img src="logos/next-page-logo.png" class="next-page-logo"
-        /></a>
+      <div class="input-4-container">
+        <div class="input4">
+          <textarea id="4" placeholder="Your message"></textarea>
+          <label for="4">Your message </label>
+        </div>
+      </div>
+      <div class="send-message-button">
+        <button class="custom-button">SEND MESSAGE</button>
       </div>
     </div>
 
@@ -425,7 +274,8 @@
         <img src="logos/payment.png" class="payment-method" />
       </div>
     </div>
-    <script src="javascript/sort.js"></script>
+    <script type="text/javascript" src="javascript/product-general.js"></script>
     <script type="text/javascript" src="javascript/shopping-cart.js"></script>
+    <script src="javascript/contactus.js"></script>
   </body>
 </html>
