@@ -263,28 +263,31 @@ let SearchItemAmount = 0;
 searchInputEl.addEventListener('input', () => {
 searchResultGridEl.innerHTML = ''
 SearchItemAmount = 0;
-product.forEach((product) => {
-  if(product.name.toLowerCase().includes(searchInputEl.value.toLowerCase())===true&&searchInputEl.value!=='')
+for(let i=0;i<product.length;i++)
+{
+  if(product[i].name.toLowerCase().includes(searchInputEl.value.toLowerCase())===true&&searchInputEl.value!=='')
   {
     productResultEl.style.display = 'block';
     searchResultGridEl.innerHTML += `
     <div class="search-result-item">
        <div class="search-item-photo-container">
-        <a href="${product.productLink}"><img
-         src="${product.imgSrc}"
+        <a href="${product[i].productLink}"><img
+         src="${product[i].imgSrc}"
          class="search-item-photo"
            /></a>
        </div>
-         <div class="search-item-name"><a href="${product.productLink}">
-        ${product.name}</a>
+         <div class="search-item-name"><a href="${product[i].productLink}">
+        ${product[i].name}</a>
      </div>
-          <div class="search-item-price">$ ${product.price}</div>
+          <div class="search-item-price">$ ${product[i].price}</div>
        </div>
     `
     checkForItem = 1;
     SearchItemAmount += 1;
+    if(SearchItemAmount===4)
+      break;
   }
-})
+}
 if(SearchItemAmount===1)
 {
   searchResultAmountEl.innerHTML = '1 RESULT';
@@ -301,3 +304,32 @@ if(searchInputEl === '' || !checkForItem)
   checkForItem = 0;
   console.log(SearchItemAmount);
 })
+
+let miniMenuItemEl = document.querySelector('.item-info');
+let miniItemInfoContainer = document.querySelector('.mini-info-item-container');
+
+function openInfoMenu()
+{
+  if(miniMenuItemEl.classList.contains('info'))
+  {
+    setTimeout(() => {
+      miniMenuItemEl.classList.remove('info');
+    miniMenuItemEl.classList.add('info-dissappear');
+    miniItemInfoContainer.style.display = 'none';
+    }, 500);
+    miniItemInfoContainer.classList.remove('mini-info-item-appear');
+    miniItemInfoContainer.classList.add('mini-info-item-dissappear');
+    
+  }
+  else
+  {
+    miniMenuItemEl.classList.remove('info-dissappear');
+    miniMenuItemEl.classList.add('info');
+  setTimeout(() => {
+    miniItemInfoContainer.style.display = 'block';
+    miniItemInfoContainer.classList.remove('mini-info-item-dissappear');
+    miniItemInfoContainer.classList.add('mini-info-item-appear');
+  }, 500);
+  console.log('2');
+  }
+}

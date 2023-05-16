@@ -185,7 +185,7 @@
   cursor: pointer;
 }
 
-.item-info {
+.item .item-info {
   color: rgb(229, 227, 219);
   font-size: 12px;
   font-weight: 700;

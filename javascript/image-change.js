@@ -41,7 +41,7 @@ document.getElementById('display4').onclick = () =>
   document.getElementById('popup-4').style.display = 'block';
 };
 
-document.querySelectorAll('.pop-up-image span').forEach(span =>
+document.querySelectorAll('.pop-up-image .close-popup').forEach(span =>
   {
     span.onclick = () => {
       document.getElementById('popup-1').style.display = 'none';

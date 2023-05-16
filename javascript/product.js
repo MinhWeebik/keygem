@@ -3,7 +3,7 @@ const product = [
     id: 0,
     name: 'Clear 2048 Purple Keycaps Set',
     price: 60,
-    instock: 10,
+    instock: 20,
     imgSrc: 'logos/product-image-1.webp',
     productLink: 'products.html'
   },
@@ -30,6 +30,22 @@ const product = [
     instock: 30,
     imgSrc: 'logos/product-image-7.webp',
     productLink: ''
+  },
+  {
+    id: 4,
+    name: 'Glitch X Frost PCB',
+    price: 60,
+    instock: 30,
+    imgSrc: 'logos/product-image-8.webp',
+    productLink: ''
+  },
+  {
+    id: 5,
+    name: 'Keychron Black Transparent OSA Keycaps',
+    price: 25,
+    instock: 30,
+    imgSrc: 'logos/product-image-10.webp',
+    productLink: 'products2.html'
   }
 ]
 

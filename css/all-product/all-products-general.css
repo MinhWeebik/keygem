@@ -493,12 +493,93 @@ input:focus {
   transition: color 0.3s;
 }
 
+.mini-info-item-container {
+  position: absolute;
+  width: 100%;
+  margin-top: 20px;
+  display: none;
+}
+
+.mini-info-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 40px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.mini-info-item:hover {
+  color: rgb(212, 175, 55);
+}
+
+.info {
+  position: relative;
+  animation: infoOpen 0.5s forwards;
+}
+
+.info-dissappear {
+  animation: infoClose 0.5s forwards;
+}
+
 .mini-menu-account {
   font-size: 14px;
   font-weight: 600;
   color: rgb(85, 84, 83);
   margin-top: 30px;
-  transition: color 0.3s;
+  transition: color 1s;
+}
+
+.mini-info-item-appear {
+  animation: infoItemAppear 0.5s forwards;
+}
+
+.mini-info-item-dissappear {
+  animation: infoItemDissappear 0.5s forwards;
+}
+
+@keyframes infoOpen {
+  to {
+    padding-bottom: 190px;
+  }
+}
+
+@keyframes infoClose {
+  from {
+    padding-bottom: 190px;
+  }
+
+  to {
+    padding-bottom: 20px;
+  }
+}
+
+@keyframes infoItemAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes infoItemDissappear {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  to {
+
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
 
 .mini-menu-account:hover {

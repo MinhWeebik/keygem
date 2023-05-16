@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shipping Policy - KEYGEM</title>
+    <title>CLEAR 2048 PURPLE KEYCAPS SET - KEYGEM</title>
     <link rel="icon" href="logos/main-logo.png" type="image/icon type" />
-    <link rel="stylesheet" href="css/product/products-general.css" />
     <link rel="stylesheet" href="css/product/products-header.css" />
+    <link rel="stylesheet" href="css/product/products-general.css" />
     <link rel="stylesheet" href="css/product/products-footer.css" />
-    <link
-      rel="stylesheet"
-      href="css/shipping-policy/shipping-policy-body.css"
-    />
+    <link rel="stylesheet" href="css/product/products-body-2.css" />
     <script type="text/javascript" src="javascript/jquery-3.6.4.js"></script>
     <script src="javascript/product.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -211,58 +208,158 @@
     </div>
 
     <div class="main-body">
-      <div class="text1">Shipping policy</div>
-      <div class="text2">
-        We try to provide shipping for as many countries as possible. Please
-        check the table for more information regarding pricing and processing
-        times.
-      </div>
-      <div class="text3">
-        All orders which are placed before midnight will be shipped the next
-        business day!
-      </div>
-      <div class="text4">
-        Depending on the weight of the package it will be handed over to DHL or
-        German Post here in Germany. Both of these shipping companies might hand
-        over the package to your local shipping companies.
-      </div>
-      <div class="text5">
-        IMPORTANT! Shipping to the US, Canada, and Australia official
-        Information from DHL and German Post:
-      </div>
-      <div class="text6">
-        Depending on the available transport capacities, we reserve the right to
-        ship packages and parcels by sea to the USA until further notice. The
-        franking of such shipments is only possible online and we expressly
-        point out that under certain circumstances very long transit times of up
-        to 60 days must be expected. For destinations in the western United
-        States or in remote regions, the transit time may also be longer.
-      </div>
-      <div class="text7">
-        IMPORTANT! Shipping to Bulgaria and Israel is currently very slow and it
-        comes to delivery times over 1-2 months.
-      </div>
-      <div class="text-flexbox">
-        <div>
-          <div>Region</div>
-          <div>Germany</div>
-          <div>EU</div>
-          <div>Asia</div>
-          <div>USA and Canada</div>
+      <div class="product-container">
+        <div class="product-image-container">
+          <div class="main-image-container">
+            <div class="display">
+              <img
+                src="logos/product-image-10.webp"
+                class="main-image"
+                id="display1"
+              />
+            </div>
+            <div class="list-product">
+              <div class="display">
+                <img
+                  src="logos/product-image-9.webp"
+                  class="main-image"
+                  id="display2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="pop-up-image" id="popup-1">
+            <span
+              class="close-popup"
+              onclick="document.getElementById('popup-1').style.display = 'none';"
+              >&times;</span
+            >
+            <img src="logos/product-image-10.webp" class="pop-up-picture" />
+          </div>
+          <div class="pop-up-image" id="popup-2">
+            <span
+              class="close-popup"
+              onclick="document.getElementById('popup-2').style.display = 'none';"
+              >&times;</span
+            >
+            <img src="logos/product-image-9.webp" class="pop-up-picture" />
+          </div>
+          <div class="change-image-container-block">
+            <div class="change-image-container">
+              <img
+                src="logos/product-image-10.webp"
+                class="change-image"
+                onclick="currentSlide(1)"
+              />
+              <img
+                src="logos/product-image-9.webp"
+                class="change-image"
+                onclick="currentSlide(2)"
+              />
+            </div>
+          </div>
+          <script
+            type="text/javascript"
+            src="javascript/image-change.js"
+          ></script>
         </div>
-        <div>
-          <div>Pricing starting at</div>
-          <div>5.00 Euro</div>
-          <div>7.00 Euro</div>
-          <div>7.00 Euro</div>
-          <div>7.00 Euro</div>
+        <div class="product-info-container">
+          <div class="product-info-header">
+            Keychron Black Transparent OSA Keycaps
+          </div>
+          <div class="product-price">$ 25</div>
+          <div class="product-shipping">
+            German Sales Tax included. Sales Tax and
+            <span class="product-shipping-link">Shipping</span> will change
+            during Checkout depending on Country.
+          </div>
+          <div class="product-amount-container">
+            <div class="product-amount">
+              <div class="product-amount-minus" onclick="minusAmount()">-</div>
+              <input
+                type="text"
+                class="product-amount-text"
+                onfocusout="checkAmount()"
+              />
+              <div class="product-amount-plus" onclick="addAmount()">+</div>
+            </div>
+          </div>
+          <div class="add-to-cart-container">
+            <button class="custom-button" onclick="testAddToCart(5)">
+              ADD TO CART
+            </button>
+          </div>
+          <div class="product-main-info-container">
+            <div class="product-main-info-header">
+              Keychron Black Transparent OSA Keycaps
+            </div>
+            <div class="product-main-info-body-header">Specifications:</div>
+            <div class="product-main-info-body">&#x2022; Profile: Cherry</div>
+            <div class="product-main-info-body">&#x2022; Material: PBT</div>
+            <div class="product-main-info-body">&#x2022; Thickness: 1.4mm</div>
+            <div class="product-main-info-body">&#x2022; Stem: MX style</div>
+            <div class="product-main-info-body">&#x2022; Profile: OEM</div>
+            <div class="product-main-info-body-disclaimer-footer">
+              The offer only includes the keycaps!
+            </div>
+          </div>
+          <div class="share-container">
+            <div class="share-text">SHARE</div>
+            <img src="logos/facebook-logo.PNG.png" class="share-logo" />
+            <img src="logos/twitter-logo.png" class="share-logo" />
+            <img src="logos/insta-logo.png" class="share-logo" />
+          </div>
         </div>
-        <div>
-          <div>Processing time until Shipping</div>
-          <div>1 business day</div>
-          <div>1 business day</div>
-          <div>1 business day</div>
-          <div>1 business day</div>
+      </div>
+      <div class="you-may-also-like-container">
+        <div class="main-header">YOU MAY ALSO LIKE</div>
+        <div class="you-may-also-like-grid">
+          <div class="you-may-also-like-item">
+            <div class="you-may-also-like-image-container">
+              <img
+                src="logos/you-may-also-like-image-5.webp"
+                class="you-may-also-like-image"
+              />
+            </div>
+            <div class="you-may-also-like-item-name">
+              Gateron Red Pro / 10pcs
+            </div>
+            <div class="you-may-also-like-item-price">$ 3,70</div>
+          </div>
+          <div class="you-may-also-like-item">
+            <div class="you-may-also-like-image-container">
+              <img
+                src="logos/you-may-also-like-image-6.webp"
+                class="you-may-also-like-image"
+              />
+            </div>
+            <div class="you-may-also-like-item-name">
+              KBDfans Tiger Lite Keyboard Kit - Transparent INK
+            </div>
+            <div class="you-may-also-like-item-price">132,99</div>
+          </div>
+          <div class="you-may-also-like-item">
+            <div class="you-may-also-like-image-container">
+              <img
+                src="logos/you-may-also-like-image-7.webp"
+                class="you-may-also-like-image"
+              />
+            </div>
+            <div class="you-may-also-like-item-name">
+              Akko Black & Rose Keycap-Set
+            </div>
+            <div class="you-may-also-like-item-price">$ 54</div>
+          </div>
+          <div class="you-may-also-like-item">
+            <div class="you-may-also-like-image-container">
+              <img
+                src="logos/you-may-also-like-image-8.webp"
+                class="you-may-also-like-image"
+              />
+            </div>
+            <div class="you-may-also-like-item-name">WS Red Switch / 10pcs</div>
+            <div class="you-may-also-like-item-price">$ 3,90</div>
+          </div>
         </div>
       </div>
     </div>
@@ -309,6 +406,7 @@
         <img src="logos/payment.png" class="payment-method" />
       </div>
     </div>
+    <script type="text/javascript" src="javascript/product-general.js"></script>
     <script type="text/javascript" src="javascript/shopping-cart.js"></script>
   </body>
 </html>

@@ -1,9 +1,11 @@
 let productAmount = document.querySelector('.product-amount-text');
 productAmount.value = 1;
+let stockAmount = product.find((product)=>product.name.toLowerCase()===document.querySelector('.product-main-info-header').innerHTML.toLowerCase().trim()).instock;
+console.log(stockAmount);
 
 function addAmount()
 {
-  if(productAmount.value<10)
+  if(productAmount.value<stockAmount)
   {
     productAmount.value = Number(productAmount.value)+1;
   }
@@ -23,9 +25,9 @@ function checkAmount()
   {
     productAmount.value = 1;
   }
-  else if(productAmount.value>10)
+  else if(productAmount.value>stockAmount)
   {
-    productAmount.value = 10;
+    productAmount.value = stockAmount;
   }
   productAmount.value = Number(productAmount.value);
 }
@@ -39,3 +41,4 @@ function isOnlyDigits(string) {
    }
    return true;
 }
+
