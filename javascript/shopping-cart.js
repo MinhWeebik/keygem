@@ -66,6 +66,7 @@ function openSearchNav()
   document.getElementById("cart-background").style.zIndex = "5";
   document.body.style.overflow = "hidden";
   document.getElementById("header").style.backgroundColor = "black";
+  document.querySelector('.search-input').value='';
 }
 
 function closeSearchNav()
@@ -78,6 +79,8 @@ function closeSearchNav()
   document.body.style.overflowY = "auto";
   document.body.style.overflowX = 'hidden';
   document.getElementById("header").style.backgroundColor = "";
+  searchResultGridEl.innerHTML = '';
+    productResultEl.style.display = 'none';
 }
 
 function changeLayout1()
@@ -283,10 +286,12 @@ for(let i=0;i<product.length;i++)
          class="search-item-photo"
            /></a>
        </div>
+         <div>
          <div class="search-item-name"><a href="${product[i].productLink}">
-        ${product[i].name}</a>
-     </div>
+            ${product[i].name}</a>
+            </div>
           <div class="search-item-price">$ ${product[i].price}</div>
+         </div>
        </div>
     `
     checkForItem = 1;
@@ -309,7 +314,6 @@ if(searchInputEl === '' || !checkForItem)
     productResultEl.style.display = 'none';
   }
   checkForItem = 0;
-  console.log(SearchItemAmount);
 })
 
 let miniMenuItemEl = document.querySelector('.item-info');
