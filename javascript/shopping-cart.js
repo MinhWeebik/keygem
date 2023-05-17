@@ -34,6 +34,13 @@ function closeMenu()
     document.getElementById("cart-background").style.zIndex="-1";
     document.body.style.overflowY = "auto";
     document.body.style.overflowX = 'hidden';
+    setTimeout(() => {
+      miniMenuItemEl.classList.remove('info');
+    miniMenuItemEl.classList.add('info-dissappear');
+    miniItemInfoContainer.style.display = 'none';
+    }, 500);
+    miniItemInfoContainer.classList.remove('mini-info-item-appear');
+    miniItemInfoContainer.classList.add('mini-info-item-dissappear');
 }
 
 function closeCartNav()
@@ -319,7 +326,6 @@ function openInfoMenu()
     }, 500);
     miniItemInfoContainer.classList.remove('mini-info-item-appear');
     miniItemInfoContainer.classList.add('mini-info-item-dissappear');
-    
   }
   else
   {

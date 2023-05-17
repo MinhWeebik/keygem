@@ -70,7 +70,6 @@ function imageZoom(imgID,lensID)
     function leaveLens()
     {
       lens.classList.remove('active');
-      console.log('etst');
     }
     lens.addEventListener('mouseout', leaveLens);
     lens.classList.add('active');
