@@ -1,5 +1,6 @@
 function openCartNav()
 {
+  
   if(document.querySelector('.search-nav').classList.contains('search-nav-open'))
   {
     closeSearchNav();
@@ -13,7 +14,30 @@ function openCartNav()
   document.getElementById("cart-background").style.opacity ="1";
   document.getElementById("cart-background").style.zIndex="12";
   document.body.style.overflow = "hidden";
+  if(cart.length===0)
+  {
+    btnEl.disabled = true;
+  }
+  else
+  {
+    btnEl.disabled = false;
+  }
 }
+
+function closeItem()
+{
+  if(document.querySelector('.search-nav').classList.contains('search-nav-open'))
+  {
+    closeSearchNav();
+  }
+  if(document.getElementById("mini-menu-container").style.transform = "translateX(-340px)")
+  {
+    closeMenu();
+  }
+  closeCartNav();
+}
+
+let btnEl = document.querySelector('.cart-footer .custom-button');
 
 function openMenu()
 {
@@ -259,6 +283,14 @@ function removeItemFromCart(id)
 {
   cart = cart.filter((item)=>item.id!==id);
   updateCart()
+  if(cart.length===0)
+  {
+    btnEl.disabled = true;
+  }
+  else
+  {
+    btnEl.disabled = false;
+  }
 }
 
 let searchResult = [];
