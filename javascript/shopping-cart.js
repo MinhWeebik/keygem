@@ -263,7 +263,6 @@ function changeNumberOfUnit(action, id)
       numberOfUnits,
     }
   })
-
   updateCart();
 }
 
